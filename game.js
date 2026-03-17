@@ -22,7 +22,7 @@ function initFunnyPopup() {
     funnyPopup.id = "funnyPopup";
 
     funnyPopupImg = document.createElement("img");
-    funnyPopupImg.src = "images/funny-popup.jpg";
+    funnyPopupImg.src = "funny-popup.jpg";
     funnyPopupImg.alt = "Funny popup";
 
     funnyPopupImg.onload = function () {
