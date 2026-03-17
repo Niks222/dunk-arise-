@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Basket Game Popup Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-wrap">
+        <div class="top-ui">
+            <div class="score-box">
+                Score: <span id="scoreValue">0</span>
+            </div>
+
+            <div class="debug-box">
+                <button id="testPopupBtn" type="button">Test popup</button>
+                <button id="testScoreBtn" type="button">Add score</button>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="360" height="640"></canvas>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
