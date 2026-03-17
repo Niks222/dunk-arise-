@@ -1,0 +1,115 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: 100vh;
+    max-height: 100vh;
+    background: #1c1c1c;
+    overflow: hidden;
+}
+
+.top-ui {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    pointer-events: none;
+}
+
+.score-box {
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 18px;
+    font-weight: bold;
+    pointer-events: auto;
+}
+
+.debug-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    pointer-events: auto;
+}
+
+.debug-box button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#gameCanvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(to bottom, #6fc3ff 0%, #9ddbff 45%, #d6f1ff 46%, #d6f1ff 100%);
+}
+
+/* Funny popup */
+.funny-popup {
+    position: fixed;
+    left: 50%;
+    top: 18%;
+    transform: translate(-50%, -20px) scale(0.82);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 99999;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.funny-popup.show {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+}
+
+.funny-popup img {
+    display: block;
+    width: 220px;
+    max-width: 72vw;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.38);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .score-box {
+        font-size: 16px;
+    }
+
+    .debug-box button {
+        font-size: 13px;
+        padding: 9px 10px;
+    }
+
+    .funny-popup img {
+        width: 180px;
+        max-width: 78vw;
+    }
+  }
